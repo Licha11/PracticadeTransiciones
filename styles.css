@@ -10,3 +10,19 @@ body{
 main{
     flex-grow: 1;
 }
+
+/* Transicion de color */
+
+.item{
+    background-color: tomato;
+    width: 200px;
+    height: 200px;
+    transition-property: background-color;
+    transition-duration: 800ms;
+    transition-timing-function: ease-out;
+}
+
+.item:hover{
+    background-color: green;
+    transition: 800ms;
+}
