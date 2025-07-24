@@ -26,3 +26,14 @@ main{
     background-color: green;
     transition: 800ms;
 }
+
+/* Transicion de tamaño de fuente */
+
+.parrafoAmplio{
+transition: font-size 300ms ease-out;
+}
+
+.parrafoAmplio:hover{
+    font-size: larger;
+    cursor: pointer;
+}
