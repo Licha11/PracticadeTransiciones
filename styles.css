@@ -37,3 +37,18 @@ transition: font-size 300ms ease-out;
     font-size: larger;
     cursor: pointer;
 }
+
+/* Transicion de opacidad */
+
+.itemOpacidad{
+width: 200px;
+height: 100px;
+background-color: lightcoral;
+opacity: 0.8;
+transition: opacity 200ms ease-in;
+}
+
+.itemOpacidad:hover{
+    opacity: 1;
+    cursor: pointer;
+}
