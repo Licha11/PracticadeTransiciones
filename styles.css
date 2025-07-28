@@ -52,3 +52,23 @@ transition: opacity 200ms ease-in;
     opacity: 1;
     cursor: pointer;
 }
+
+.subrayado{
+    position: relative;
+    display: inline-block;
+}
+
+.subrayado::after{
+   content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0%;
+    background-color: rgb(199, 48, 48);
+    height: 2px;
+    transition: width 300ms ease-in;
+}
+
+.subrayado:hover::after{
+    width: 100%;
+}
