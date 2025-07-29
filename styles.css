@@ -1,99 +1,120 @@
-*{margin: 0;
-padding: 0;}
-
-body{
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+* {
+  margin: 0;
+  padding: 0;
 }
 
-main{
-    flex-grow: 1;
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex-grow: 1;
 }
 
 /* Transicion de color */
 
-.item{
-    background-color: tomato;
-    width: 200px;
-    height: 200px;
-    transition-property: background-color;
-    transition-duration: 800ms;
-    transition-timing-function: ease-out;
+.item {
+  background-color: tomato;
+  width: 200px;
+  height: 200px;
+  transition-property: background-color;
+  transition-duration: 800ms;
+  transition-timing-function: ease-out;
 }
 
-.item:hover{
-    background-color: green;
-    transition: 800ms;
+.item:hover {
+  background-color: green;
+  transition: 800ms;
 }
 
 /* Transicion de tamaño de fuente */
 
-.parrafoAmplio{
-transition: font-size 300ms ease-out;
+.parrafoAmplio {
+  transition: font-size 300ms ease-out;
 }
 
-.parrafoAmplio:hover{
-    font-size: larger;
-    cursor: pointer;
+.parrafoAmplio:hover {
+  font-size: larger;
+  cursor: pointer;
 }
 
 /* Transicion de opacidad */
 
-.itemOpacidad{
-width: 200px;
-height: 100px;
-background-color: lightcoral;
-opacity: 0.8;
-transition: opacity 200ms ease-in;
+.itemOpacidad {
+  width: 200px;
+  height: 100px;
+  background-color: lightcoral;
+  opacity: 0.8;
+  transition: opacity 200ms ease-in;
 }
 
-.itemOpacidad:hover{
-    opacity: 1;
-    cursor: pointer;
+.itemOpacidad:hover {
+  opacity: 1;
+  cursor: pointer;
 }
 
-.subrayado{
-    position: relative;
-    display: inline-block;
+.subrayado {
+  position: relative;
+  display: inline-block;
 }
 
-.subrayado::after{
-   content: "";
-    position: absolute;
-    left: 0;
-    bottom: -5px;
-    width: 0%;
-    background-color: rgb(199, 48, 48);
-    height: 2px;
-    transition: width 300ms ease-in;
+.subrayado::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 0%;
+  background-color: rgb(199, 48, 48);
+  height: 2px;
+  transition: width 300ms ease-in;
 }
 
-.subrayado:hover::after{
-    width: 100%;
+.subrayado:hover::after {
+  width: 100%;
 }
 
 /* Animacion de movimiento */
-.contenedorAnimado{
-    width: 150px;
-    height: 50px;
-    background-color: lightgray;
-    color: black;
-    animation-name: movimiento;
-    animation-duration: 2s;
-    animation-timing-function: linear;
-    animation-direction: alternate;
-    animation-iteration-count: infinite;
+.contenedorAnimado {
+  width: 150px;
+  height: 50px;
+  background-color: lightgray;
+  color: black;
+  animation-name: movimiento;
+  animation-duration: 2s;
+  animation-timing-function: linear;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
 }
 
-@keyframes movimiento{
-    from{
-        /* aqui nombro los valores de css que quiero que tenga mi animacion en el inicio */
-        transform: translateX(0px);
-    }
+@keyframes movimiento {
+  from {
+    /* aqui nombro los valores de css que quiero que tenga mi animacion en el inicio */
+    transform: translateX(0px);
+  }
 
-    to{
-        /* aqui nombro los valores de css que quiero que tenga mi animacion al final */
-        transform: translateX(200px);
-    }
+  to {
+    /* aqui nombro los valores de css que quiero que tenga mi animacion al final */
+    transform: translateX(200px);
+  }
+}
+
+/* animacion de rotacion */
+
+.parrafoRotador {
+  animation-name: rotacion;
+  animation-duration: 2s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes rotacion {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
 }
